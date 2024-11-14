@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    stdin_open: true
+    tty: true
+    networks:
+      - estatistica-descritiva-python
+    volumes:
+      - .:/app
+volumes:
+  data:
+networks:
+  estatistica-descritiva-python:
+    name: estatistica-descritiva-python
